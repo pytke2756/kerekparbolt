@@ -7,7 +7,7 @@ public class Kerekpar {
     private String nev;
     private String tipus;
     private int ar;
-    private boolean hasznalt;
+    private int hasznalt;
     private int kategoriaId;
     private LocalDate rogzitesDatuma;
 
@@ -17,7 +17,7 @@ public class Kerekpar {
         this.nev = sorSplit[1];
         this.tipus = sorSplit[2];
         this.ar = Integer.parseInt(sorSplit[3]);
-        this.hasznalt = Boolean.parseBoolean(sorSplit[4]);
+        this.hasznalt = Integer.parseInt(sorSplit[4]);
         this.kategoriaId = Integer.parseInt(sorSplit[5]);
         String datumReplace = sorSplit[6].replace('.', '-');
         this.rogzitesDatuma = LocalDate.parse(datumReplace);
@@ -39,8 +39,15 @@ public class Kerekpar {
         return ar;
     }
 
-    public boolean isHasznalt() {
-        return hasznalt;
+    public String getHasznalt() {
+        switch (this.hasznalt){
+            case 1:
+                return "Használt";
+            case 0:
+                return "Új";
+            default:
+                return "Hibás adat";
+        }
     }
 
     public int getKategoriaId() {
