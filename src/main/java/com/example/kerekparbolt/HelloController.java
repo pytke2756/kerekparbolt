@@ -65,7 +65,7 @@ public class HelloController {
 
     public void btnTrekkingClick(MouseEvent mouseEvent) {
     }
-
+    @FXML
     public void btnBeolvasClick(MouseEvent mouseEvent) {
         try {
             FileReader fr = new FileReader("kerekparok.csv");
@@ -77,6 +77,10 @@ public class HelloController {
                 tableKerekparok.getItems().add(obj);
                 sor = br.readLine();
             }
+            btnLegolcsobbMtb.setDisable(false);
+            btnGyerek.setDisable(false);
+            btnTrekking.setDisable(false);
+            btnHibasAdat.setDisable(false);
 
         }catch (Exception ex){
             System.err.println(ex.getMessage());
