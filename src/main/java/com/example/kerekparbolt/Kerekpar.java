@@ -10,6 +10,7 @@ public class Kerekpar {
     private int hasznalt;
     private int kategoriaId;
     private LocalDate rogzitesDatuma;
+    private boolean hibas;
 
     public Kerekpar(String sor) {
         String[] sorSplit = sor.split(";");
@@ -21,6 +22,11 @@ public class Kerekpar {
         this.kategoriaId = Integer.parseInt(sorSplit[5]);
         String datumReplace = sorSplit[6].replace('.', '-');
         this.rogzitesDatuma = LocalDate.parse(datumReplace);
+        this.hibas = false;
+    }
+
+    public boolean isHibas() {
+        return hibas;
     }
 
     public int getCikkSzam() {
@@ -46,6 +52,7 @@ public class Kerekpar {
             case 0:
                 return "Új";
             default:
+                this.hibas = true;
                 return "Hibás adat";
         }
     }
@@ -67,6 +74,7 @@ public class Kerekpar {
             case 3:
                 return "gyermek";
             default:
+                this.hibas = true;
                 return "Hibás adat";
         }
     }

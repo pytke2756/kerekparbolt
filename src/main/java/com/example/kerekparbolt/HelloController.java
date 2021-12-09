@@ -77,9 +77,6 @@ public class HelloController {
                 tableKerekparok.getItems().add(obj);
                 sor = br.readLine();
             }
-            btnLegolcsobbMtb.setDisable(false);
-            btnGyerek.setDisable(false);
-            btnTrekking.setDisable(false);
             btnHibasAdat.setDisable(false);
 
         }catch (Exception ex){
