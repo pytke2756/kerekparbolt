@@ -1,16 +1,74 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.kerekparbolt.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.2" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox prefHeight="200.0" prefWidth="768.0">
+         <children>
+            <TableView fx:id="tableKerekparok" prefHeight="200.0" prefWidth="756.0">
+              <columns>
+                <TableColumn fx:id="colCikk" prefWidth="108.0" text="Cikkszám" />
+                <TableColumn fx:id="colNev" prefWidth="108.0" text="Név" />
+                  <TableColumn fx:id="colTipus" prefWidth="108.0" text="Típus" />
+                  <TableColumn fx:id="colAr" prefWidth="108.0" text="Ár (Ft)" />
+                  <TableColumn fx:id="colHasznalt" prefWidth="108.0" text="Használt" />
+                  <TableColumn fx:id="colKat" prefWidth="108.0" text="Kategória" />
+                  <TableColumn fx:id="colDate" prefWidth="108.0" text="Rögzítési dátum" />
+              </columns>
+            </TableView>
+            <ScrollBar orientation="VERTICAL" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="20.0" left="20.0" right="15.0" top="20.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox>
+         <children>
+            <VBox>
+               <children>
+                  <Button fx:id="btnLegolcsobbMtb" mnemonicParsing="false" onMouseClicked="#btnLegolcsobbMtbClick" prefWidth="200.0" text="Legolcsóbb használt MTB">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnGyerek" mnemonicParsing="false" onMouseClicked="#btnGyerekClick" prefWidth="200.0" text="Gyerek kerékpárok száma">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnTrekking" mnemonicParsing="false" onMouseClicked="#btnTrekkingClick" prefWidth="200.0" text="Trekking - férfi fáljbaír">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" right="50.0" />
+               </HBox.margin>
+            </VBox>
+            <VBox alignment="TOP_RIGHT" nodeOrientation="LEFT_TO_RIGHT">
+               <children>
+                  <Button fx:id="btnBeolvas" mnemonicParsing="false" onMouseClicked="#btnBeolvasClick" prefWidth="200.0" text="Fájlbeolvasás">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnHibasAdat" mnemonicParsing="false" onMouseClicked="#btnHibasAdatClick" prefWidth="200.0" text="Hibás adat törlése">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnKilep" mnemonicParsing="false" onMouseClicked="#btnKilepClick" prefWidth="200.0" text="KILÉP">
+                     <VBox.margin>
+                        <Insets bottom="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
 </VBox>
