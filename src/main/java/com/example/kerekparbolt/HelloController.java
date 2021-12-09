@@ -78,6 +78,7 @@ public class HelloController {
                 sor = br.readLine();
             }
             btnHibasAdat.setDisable(false);
+            btnBeolvas.setDisable(true);
 
         }catch (Exception ex){
             System.err.println(ex.getMessage());
@@ -85,6 +86,11 @@ public class HelloController {
     }
 
     public void btnHibasAdatClick(MouseEvent mouseEvent) {
+
+        tableKerekparok.getItems().removeIf(Kerekpar::isHibas); // nem teljesen működik
+        btnLegolcsobbMtb.setDisable(false);
+        btnGyerek.setDisable(false);
+        btnTrekking.setDisable(false);
     }
 
     public void btnKilepClick(MouseEvent mouseEvent) {
