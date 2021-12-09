@@ -28,17 +28,17 @@
             <children>
                 <VBox>
                     <children>
-                        <Button fx:id="btnLegolcsobbMtb" mnemonicParsing="false" onMouseClicked="#btnLegolcsobbMtbClick" prefWidth="200.0" text="Legolcsóbb használt MTB">
+                        <Button fx:id="btnLegolcsobbMtb" disable="true" mnemonicParsing="false" onMouseClicked="#btnLegolcsobbMtbClick" prefWidth="200.0" text="Legolcsóbb használt MTB">
                             <VBox.margin>
                                 <Insets bottom="10.0" />
                             </VBox.margin>
                         </Button>
-                        <Button fx:id="btnGyerek" mnemonicParsing="false" onMouseClicked="#btnGyerekClick" prefWidth="200.0" text="Gyerek kerékpárok száma">
+                        <Button fx:id="btnGyerek" disable="true" mnemonicParsing="false" onMouseClicked="#btnGyerekClick" prefWidth="200.0" text="Gyerek kerékpárok száma">
                             <VBox.margin>
                                 <Insets bottom="10.0" />
                             </VBox.margin>
                         </Button>
-                        <Button fx:id="btnTrekking" mnemonicParsing="false" onMouseClicked="#btnTrekkingClick" prefWidth="200.0" text="Trekking - férfi fáljbaír">
+                        <Button fx:id="btnTrekking" disable="true" mnemonicParsing="false" onMouseClicked="#btnTrekkingClick" prefWidth="200.0" text="Trekking - férfi fáljbaír">
                             <VBox.margin>
                                 <Insets bottom="10.0" />
                             </VBox.margin>
@@ -55,7 +55,7 @@
                                 <Insets bottom="10.0" />
                             </VBox.margin>
                         </Button>
-                        <Button fx:id="btnHibasAdat" mnemonicParsing="false" onMouseClicked="#btnHibasAdatClick" prefWidth="200.0" text="Hibás adat törlése">
+                        <Button fx:id="btnHibasAdat" disable="true" mnemonicParsing="false" onMouseClicked="#btnHibasAdatClick" prefWidth="200.0" text="Hibás adat törlése">
                             <VBox.margin>
                                 <Insets bottom="10.0" />
                             </VBox.margin>
